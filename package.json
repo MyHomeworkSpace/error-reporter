@@ -13,6 +13,9 @@
   },
   "homepage": "https://github.com/MyHomeworkSpace/error-reporter#readme",
   "dependencies": {
-    "request": "^2.74.0"
+    "knex": "^0.11.10",
+    "mysql": "^2.11.1",
+    "request": "^2.74.0",
+    "sync-request": "^3.0.1"
   }
 }
