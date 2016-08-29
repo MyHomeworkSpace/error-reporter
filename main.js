@@ -28,7 +28,7 @@ function sendMsg(payload) {
 }
 
 var webhookURL = getVar("SLACK_WEBHOOK_URL");
-var descriptions = ["Ha-ha, an error.", "Wasn't me.", "You should probably fix this.", "I blame <@robotxlabs>", "Maybe <https://www.youtube.com/watch?v=dQw4w9WgXcQ|this> will help you?"];
+var descriptions = ["Ha-ha, an error.", "Wasn't me.", "You should probably fix this.", "I blame <@robotxlabs>", "Maybe <https://www.youtube.com/watch?v=dQw4w9WgXcQ|this> will help you?", "<@thatoddmailbox>...", "Ugh, wat du nao?"];
 var old_count = parseInt(fs.readFileSync(last_count));
 
 knex("errors").count("*").then(function(data) {
