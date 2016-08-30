@@ -45,7 +45,7 @@ knex("errors").count("*").then(function(data) {
 		for (var i in results) {
 			var row = results[i];
 			var color = "danger"
-			if (row.error = "404") {
+			if (row.error === "404") {
 				color = "warning"
 			} else if (row.msg === "Yay an error"){
 				color = "good"
