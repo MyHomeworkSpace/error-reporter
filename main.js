@@ -44,6 +44,12 @@ knex("errors").count("*").then(function(data) {
 		var c = 1;
 		for (var i in results) {
 			var row = results[i];
+			var color = "danger"
+			if (row.error = "404") {
+				color = "warning"
+			} else if (row.msg === "Yay an error"){
+				color = "good"
+			}
 			var payload = {
 			    "attachments": [
 			        {
@@ -85,6 +91,17 @@ knex("errors").count("*").then(function(data) {
 			        }
 			    ]
 			};
+			
+			if (row.url === "/robots.txt"){
+				payload = {
+					attachments: [
+						{
+							color: "good",
+							text: "A bot had a hard time finding the robots.txt file"
+						}
+						]
+				}
+			}
 			sendMsg(payload);
 			c++;
 		}
