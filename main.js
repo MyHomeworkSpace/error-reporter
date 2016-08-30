@@ -44,11 +44,11 @@ knex("errors").count("*").then(function(data) {
 		var c = 1;
 		for (var i in results) {
 			var row = results[i];
-			var color = "danger"
+			var color = "danger";
 			if (row.error === "404") {
-				color = "warning"
+				color = "warning";
 			} else if (row.msg === "Yay an error"){
-				color = "good"
+				color = "good";
 			}
 			var payload = {
 			    "attachments": [
@@ -101,7 +101,7 @@ knex("errors").count("*").then(function(data) {
 						}
 						]
 				}
-			}
+			};
 			sendMsg(payload);
 			c++;
 		}
