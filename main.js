@@ -54,7 +54,7 @@ knex("errors").count("*").then(function(data) {
 			    "attachments": [
 			        {
 			            "fallback": "Uh-oh! An error has occurred, but we don't seem able to display it to you.",
-			            "color": "danger",
+			            "color": color,
 			            "author_name": "MyHomeworkSpace Error Tracker",
 			            "title": "Error #" + c,
 			            "text": descriptions[Math.floor(Math.random() * descriptions.length)],
